@@ -2,4 +2,51 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--page-font-family, 'IBM Plex mono', sans-serif);
+  background-color: var(--background-color-dark, #000028);
+  color: var(----text-color, #F1B2CE);
+  background-image: var(--background-image-dark);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 18px;
+  line-height: 23.4px;;
+  
 }
+
+.header {
+  display: grid;
+  align-items: start;
+  padding: 10px;
+}
+
+.cover {
+  min-block-size: 100vh;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before, .decorated-zone::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+  inset-block-start: 10px;
+  inset-inline-end: 10px;
+}
+
+.decorated-zone::after {
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+  inset-block-end: 10px;
+  inset-inline-start: 10px;
+}
+
+
