@@ -9,5 +9,7 @@
  --background-image-dark: url("../images/cover-image-dark.png");
  --background-color-dark: #000028;
  --page-font-family: 'IBM Plex mono', sans-serif;
+ --accent-color-hover: rgba(255, 0, 112, 0.4);
+ --page-padding-lr: 0 10px;
 
 }
