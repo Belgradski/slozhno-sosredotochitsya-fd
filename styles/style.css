@@ -6,7 +6,6 @@
   background-color: var(--background-color-dark, #000028);
   color: var(----text-color, #f1b2ce);
   background-image: var(--background-image-dark);
-  background-color: #000028;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -256,8 +255,6 @@
   text-shadow: 2px 2px 0px var(--accent-color, #ff0070);
 }
 
-/*Планшет*/
-
 @media (width >= 768px) {
   .header {
     padding: 20px 20px 20px 0;
@@ -386,7 +383,56 @@
     grid-row: span 1;
     grid-column: span 2;
   }
+}
+
+/* планшет */
+
+@media (width >= 1024px) {
+  .header__theme-menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 0;
+    margin-inline-start: 20px;
+  }
+
+  .header_brand {
+    display: flex;
+    justify-content: flex-start;
+    margin-block-start: 230px;
+  }
+
+  .header_title {
+    inline-size: 491px;
+    min-block-size: 71px;
+  }
+
+  .main {
+    padding-inline-end: 20.19px;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: minmax(236px, 1fr) minmax(649px, 2fr);
+    gap: 20px;
+  }
+
+  .concentration-reduction_list {
+    grid-template-columns: repeat(3, minmax(315px, 1fr));
+    gap: 20px;
+  }
 
   .footer_brand {
+    font-size: 157px;;
   }
+
+  .footer {
+    margin-block-start: 5px;
+  }
+
 }
