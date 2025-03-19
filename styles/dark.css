@@ -3,7 +3,7 @@
   --brand-color: #db00ff;
   --text-color: #f1b2ce;
   --background-image: url("../images/cover-image-dark.png");
-  --background-color: #000028;
+  --background-color: var(--background-color, #000028);
   --page-font-family: "IBM Plex mono", sans-serif;
   --accent-color-hover: rgba(255, 0, 112, 0.4);
   --page-padding-lr: 0 10px;
