@@ -1,15 +1,24 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
- --accent-color: #FF0070;
- --brand-color: #DB00FF;
- --text-color: #F1B2CE;
- --background-image-dark: url("../images/cover-image-dark.png");
- --background-color-dark: #000028;
- --page-font-family: 'IBM Plex mono', sans-serif;
- --accent-color-hover: rgba(255, 0, 112, 0.4);
- --page-padding-lr: 0 10px;
+  --accent-color: #FF0070;
+  --brand-color: #DB00FF;
+  --text-color: #F1B2CE;
+  --background-image: url("../images/cover-image-dark.png");
+  --background-color: #000028;
+  --page-font-family: 'IBM Plex mono', sans-serif;
+  --accent-color-hover: rgba(255, 0, 112, 0.4);
+  --page-padding-lr: 0 10px;
+  --title-color: #FF0070;
+  --rec-visible: visible;
+  --button-color: #FF0070;
+
+  --accent-color-2: #FF8DCB;
+  --brand-color-2: #FFC2E6;
+  --text-color-2: #353430;
+  --background-color: ;
+  --accent-color-hover-2: rgba(50, 49, 45, 0.4);
+  --background-image-2: url("../images/cover-image-light.png");
+  --rec-unvisible: hidden;
+  --button-color-2: #353430;
+  --background-color-2: #353430;
 
 }
