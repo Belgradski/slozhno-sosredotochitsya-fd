@@ -1,25 +1,25 @@
 :root.theme-light {
-  --accent-color: var(--accent-color-2, #FF8DCB);
-  --brand-color: var(--brand-color-2, #FFC2E6);
-  --text-color: var(--text-color-2, #353430);
-  --accent-color-hover: var(--accent-color-hover-2, rgba(50, 49, 45, 0.4));
-  --background-image: var(--background-image-2, url("../images/cover-image-light.png"));
-  --title-color: var(--text-color-2, #353430);
-  --rec-visible: var(--rec-unvisible, hidden);
-  --button-color: var(--button-color-2, #353430);
-  --background-color: var(--background-color-2, #353430);
+  --accent-color: #FF8DCB;
+  --brand-color: #FFC2E6;
+  --text-color: #353430;
+  --accent-color-hover: rgba(50, 49, 45, 0.4);
+  --background-image: url("../images/cover-image-light.png");
+  --title-color: #353430;
+  --rec-visible: hidden;
+  --button-color: #353430;
+  --background-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-      --accent-color: var(--accent-color-2, #FF8DCB);
-      --brand-color: var(--brand-color-2, #FFC2E6);
-      --text-color: var(--text-color-2, #353430);
-      --accent-color-hover: var(--accent-color-hover-2, rgba(50, 49, 45, 0.4));
-      --background-image: var(--background-image-2, url("../images/cover-image-light.png"));
-      --title-color: var(--text-color-2, #353430);
-      --rec-visible: var(--rec-unvisible, hidden);
-      --button-color: var(--button-color-2, #353430);
-      --background-color: var(--background-color-2, #353430);
-    }
+    --accent-color: #FF8DCB;
+    --brand-color: #FFC2E6;
+    --text-color: #353430;
+    --accent-color-hover: rgba(50, 49, 45, 0.4);
+    --background-image: url("../images/cover-image-light.png");
+    --title-color: #353430;
+    --rec-visible: hidden;
+    --button-color: #353430;
+    --background-color: #353430;
   }
+}

@@ -1,5 +1,5 @@
 .page {
-  font-family: var(--page-font-family, "IBM Plex mono", sans-serif);
+  font-family: var(--page-font-family, "IBM Plex mono"), sans-serif;
   background-color: var(--background-color, #000028);
   color: var(--text-color, #f1b2ce);
   background-image: var(--background-image);
@@ -17,7 +17,8 @@
 }
 
 .cover {
-  min-block-size: 100vh;
+  min-height: 668px;
+  block-size: 100vh;
 }
 
 .decorated-zone {
@@ -92,6 +93,7 @@
   min-height: 26px;
   border: 1px solid transparent;
   line-height: 18px;
+  appearance: none;
 }
 
 .header__theme-menu-item {
@@ -144,8 +146,11 @@
 }
 
 .main {
-  padding-block: 40px;
+  padding-block-start: 40px;
+  padding-block-end: 0px;
   padding-inline: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .text-link {
@@ -162,35 +167,34 @@
   outline: 1px solid var(--text-color);
 }
 
-.focus-section_title,
-.concentration-reduction_title,
-.focus-tips_title {
+.section {
+  padding-block-end: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.section_title {
   font-size: inherit;
   font-weight: bold;
   color: var(--title-color, #ff0070);
 }
 
-.focus-section_list,
-.concentration-reduction_list,
-.gallery-section_list {
-  display: grid;
-  grid-template-columns: 1fr;
+.list-item_subtitle {
+  font-size: inherit;
+  margin-block-start: 20px;
+}
+
+.subtitle-weight-normal {
+  font-weight: normal;
+}
+
+.section_list {
   gap: 20px;
 }
 
-.focus-section_list-item,
-.concentration-reduction_list-item,
-.focus-tips_list-item,
-.gallery-section_list-item {
+.section_list-item {
   display: flex;
   flex-direction: column;
-}
-
-.focus-section_list-item,
-.concentration-reduction_list-item,
-.focus-tips_list-item,
-.gallery-section_list-item:first-child {
-  margin-block-start: 20px;
 }
 
 .invert-color-weight {
@@ -204,21 +208,11 @@
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  color: var(--text-color, #F1B2CE);
+  color: var(--text-color, #f1b2ce);
   padding-block-start: 10px;
 }
 
-.concentration-reduction {
-  padding-block-start: 50px;
-}
-
-.focus-tips {
-  padding-block-start: 50px;
-}
-
 .gallery {
-  padding-block-start: 50px;
-  display: grid;
   gap: 10px;
 }
 
@@ -288,61 +282,46 @@
 
   .main {
     padding-inline: 20px;
-    padding-block-end: 55px;
+    padding-block-end: 20px;
   }
 
-  section {
-    display: grid;
+  .section {
     grid-template-columns: minmax(236px, 1fr) 2fr;
     gap: 20px;
   }
 
-  .focus-section_title {
-    margin-block-start: 20px;
+  .concentration {
+    padding-block-start: 10px;
   }
 
-  .concentration-reduction {
-    padding-block-start: 80px;
+  .section_title {
+    margin-block-start: 20px;
   }
 
   .concentration-reduction_title {
     grid-column-start: span 1;
   }
 
+  .no-margin-top {
+    margin-block-start: 0;
+  }
+
+  .margin-top {
+    margin-block-start: 30px;
+  }
+
   .concentration-reduction_list {
     grid-column-start: span 2;
   }
 
-  .concentration-reduction_list-item {
-    margin-block-start: 0;
-  }
-
-  .focus-tips_title {
-    display: grid;
-    grid-column-start: span 1;
-  }
-
-  .focus-tips_list {
-    display: grid;
-    grid-column-start: 2;
-  }
-
   .invert-color-weight {
-    margin-block-start: 0;
-  }
-
-  .focus-tips {
-    padding-block-start: 80px;
+    margin-block-start: 30px;
   }
 
   .gallery {
-    padding-block-start: 80px;
+    padding-block-start: 30px;
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-
-  .gallery_title {
-    grid-column-start: span 1;
   }
 
   .gallery_list-item-image {
@@ -379,7 +358,6 @@
 
 @media (width >=1024px) {
   .header__theme-menu-list {
-    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -392,8 +370,6 @@
   }
 
   .header_brand {
-    display: flex;
-    justify-content: flex-start;
     margin-block-start: 230px;
   }
 
@@ -404,26 +380,33 @@
 
   .main {
     padding-inline-end: 20.19px;
+    padding-block-end: 15px;
   }
 
-  section {
-    display: grid;
+  .section {
     grid-template-columns: minmax(236px, 1fr) minmax(649px, 2fr);
     gap: 20px;
   }
 
   .concentration-reduction_list {
+    display: grid;
     grid-template-columns: repeat(3, minmax(315px, 1fr));
     gap: 20px;
   }
 
+  .reset-margin {
+    margin-block-start: 0;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
   .footer_brand {
-    font-size: 157px;
-    ;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .footer {
     margin-block-start: 5px;
   }
-
 }
