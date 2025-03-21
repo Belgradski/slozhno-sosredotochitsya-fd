@@ -8,6 +8,7 @@
   --rec-visible: hidden;
   --button-color: #353430;
   --background-color: #353430;
+  --decorated-color: #353430;
 }
 
 @media (prefers-color-scheme: light) {
@@ -21,5 +22,6 @@
     --rec-visible: hidden;
     --button-color: #353430;
     --background-color: #353430;
+    --decorated-color: #353430;
   }
 }
